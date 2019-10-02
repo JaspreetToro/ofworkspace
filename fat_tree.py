@@ -1,21 +1,10 @@
-"""FatTree topology by Howar31
-Configurable K-ary FatTree topology
-Only edit K should work
-OVS Bridge with Spanning Tree Protocol
-Note: STP bridges don't start forwarding until
-after STP has converged, which can take a while!
-See below for a command to wait until STP is up.
-sudo mn --custom ~/mininet/custom/topo-fat-tree.py --topo fattree --switch ovs-stp
-mininet> sh time bash -c 'while ! ovs-ofctl show es_0_0 | grep FORWARD; do sleep 1; done'
-Pass '--topo=fattree' from the command line
-"""
+
 
 from mininet.topo import Topo
 from mininet.node import OVSSwitch
 
 class OVSBridgeSTP( OVSSwitch ):
-    """Open vSwitch Ethernet bridge with Spanning Tree Protocol
-       rooted at the first bridge that is created"""
+
     prio = 1000
     def start( self, *args, **kwargs ):
         OVSSwitch.start( self, *args, **kwargs )
