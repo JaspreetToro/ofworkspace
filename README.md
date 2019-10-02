@@ -1,4 +1,4 @@
-CSC 521 Project 1 – Readme File 
+CSC 541 Project 1 – Readme File 
 Software Defined Network with Mininet Emulator and Ryu controller
 
 Name – Jaspreet Singh & Susmita Patange
